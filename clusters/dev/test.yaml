@@ -1,0 +1,4 @@
+apiVersion: v1
+kind: Namespace-Test
+metadata:
+  name: Test-CD-pipeline
