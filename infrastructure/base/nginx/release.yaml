@@ -4,14 +4,13 @@ metadata:
   name: nginx
   namespace: nginx
 spec:
-  chartRef:
+  chart:
     spec:
       chart: nginx-ingress
       version: 1.2.x
-      interval: 48h # For checking new charts
       sourceRef:
         kind: HelmRepository
         name: nginx
   releaseName: nginx
   targetNamespace: nginx
-  interval: 1h # For drifting of the help created resources
+  interval: 1h
