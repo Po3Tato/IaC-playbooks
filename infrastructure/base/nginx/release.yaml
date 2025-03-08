@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: nginx
+spec:
+  chartRef:
+    spec:
+      chart: nginx-ingress
+      version: 1.2.x
+      interval: 48h # For checking new charts
+      sourceRef:
+        kind: HelmRepository
+        name: nginx
+  release: nginx
+  interval: 1h # For drifting of the help created resources
